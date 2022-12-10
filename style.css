@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #9dabee;
+  background-image: linear-gradient(168deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  overflow: hidden;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  background: rgb(236, 47, 179);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -50%;
+  left: -50%;
+  background: linear-gradient(0deg, transparent, #044d53, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(0deg, transparent, #044d53, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 9;
+  inset: 3px;
+}
+h1 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form .input-wrapper {
+  position: relative;
+  margin: 25px 0;
+}
+
+form input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+  background: none;
+  border-radius: 10px 10px 0 0;
+  border: none;
+  border-bottom: 2px solid gray;
+  font-family: monospace;
+}
+
+form input:focus {
+  border-bottom: 2px solid #4158d0;
+}
+
+form span {
+  font-family: monospace;
+  position: absolute;
+  left: 5px;
+  bottom: -20px;
+  color: red;
+  transition: all 0.6s;
+  opacity: 0;
+  font-size: 11px;
+}
+
+#showns {
+  position: absolute;
+  z-index: 99;
+  right: 2px;
+  top: 40%;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 0;
+  border-radius: 20px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #2648f1;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.7s;
+}
+
+.btn:hover {
+  background-color: #041fa4;
+}
+
+.forget {
+  display: inline;
+  font-family: sans-serif;
+  color: gray;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.forget:hover {
+  text-decoration: underline;
+}
+
+.new {
+  font-family: sans-serif;
+  color: gray;
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.new a {
+  text-decoration: none;
+}

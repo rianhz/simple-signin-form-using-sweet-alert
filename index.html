@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <form id="myForm" action="#">
+        <h1 id="h">Sign In</h1>
+        <div class="input-wrapper">
+          <input type="text" name="username" class="input-username" placeholder="Username" />
+
+          <span class="span-username"></span>
+        </div>
+        <div class="input-wrapper">
+          <input type="password" name="password" class="input-password" placeholder="Password" />
+          <i id="showns" class="fa-solid fa-eye"></i>
+          <span class="span-password"></span>
+        </div>
+        <a class="forget" href="#">Forget password?</a>
+        <button class="btn">Sign In</button>
+        <p class="new">New member? <a href="#">Signup</a></p>
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
